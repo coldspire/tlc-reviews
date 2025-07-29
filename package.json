@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run eleventy",
+    "clean": "npx rimraf dist/",
+    "eleventy": "npx @11ty/eleventy",
+    "prettier": "prettier --write src/",
+    "serve": "npm run eleventy -- --serve",
+    "start": "npm run serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.2",
+    "prettier": "3.6.2"
+  }
 }
