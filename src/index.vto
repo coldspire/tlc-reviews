@@ -2,4 +2,6 @@
 const title = "Nanoreviews";
 const layout = "layouts/base.vto";
 ---
-TODO
+{{ for review of reviews }}
+    <p>{{ review.name }}, {{ review.dateExperienced |> dateFriendly }}, {{ review.rating }}</p>
+{{ /for }}

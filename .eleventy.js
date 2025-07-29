@@ -21,6 +21,13 @@ export default async function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.addFilter("dateFriendly", (dateOriginal) => {
+    const date = new Date(dateOriginal);
+    return date.toLocaleDateString("en-US", {
+      dateStyle: "long",
+    });
+  });
+
   return {
     dir: {
       data: "../_data",
