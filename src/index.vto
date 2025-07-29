@@ -18,6 +18,9 @@ const layout = "layouts/base.vto";
                 {{ /for }}
             </div>
         </div>
+        <div class="categories">
+            {{ for cat of review.categories }}<a href="/">{{ cat }}</a>{{ /for }}
+        </div>
     </article>
 {{ /for }}
 </section>

@@ -29,6 +29,10 @@ body {
 
 }
 
+a {
+  color: #555;
+}
+
 h1,
 h2,
 h3,
@@ -75,4 +79,10 @@ main {
 
 .details__comments > p + p {
   margin-top: var(--space-m);
+}
+
+.categories {
+  font-size: 0.75rem;
+  display: flex;
+  column-gap: 0.5rem;
 }
