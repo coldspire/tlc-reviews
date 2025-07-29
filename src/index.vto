@@ -2,6 +2,22 @@
 const title = "NanoReviews";
 const layout = "layouts/base.vto";
 ---
+<section class="reviews">
 {{ for review of reviews }}
-    <p>{{ review.name }}, {{ review.dateExperienced |> dateFriendly }}, {{ review.rating }}</p>
+    <article>
+        <h2 class="name">
+            {{ review.name }}
+            {{ if review.source }}<br /><span class="name__source">from {{ review.source }}</span> {{ /if }}
+        </h2>
+        <div class="details">
+            <p>{{ for star of review.rating }}⭐{{ /for }}</p>
+            <p>{{ review.dateExperienced |> dateFriendly }}</p>
+            <div class="details__comments">
+                {{ for comment of review.comments }}
+                <p>{{ comment }}</p>
+                {{ /for }}
+            </div>
+        </div>
+    </article>
 {{ /for }}
+</section>

@@ -46,10 +46,8 @@ const reviewsRaw = [
     finished: false,
     category: ["entertainment", "movie", "action"],
     comments: [
-      "Test comment 1",
-      "Test comment 2",
-      "Test comment 3",
-      "Test comment 4",
+      "The 20-ish minute long take is technically impressive, but call me old-fashioned: I like a good serious of cuts.",
+      "Also, the last bit of the movie is the most action-for-action's-sake sequence I've maybe ever seen. I bailed on it."
     ],
   },
   {
@@ -60,7 +58,7 @@ const reviewsRaw = [
     finished: true,
     category: ["entertainment", "movie", "action"],
     comments: [
-      "The organized assassin syndicate was my favorite part. The procedural action was fine.",
+      "The procedural action was fine. The organized assassin syndicate was my favorite part.",
     ],
   },
 ];

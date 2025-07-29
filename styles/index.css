@@ -1,4 +1,33 @@
+@import url("reset.css");
 @import url("fonts.css");
+
+:root {
+  --space-s: 0.25rem;
+  --space-m: 0.5rem;
+}
+
+html {
+  font-family: "Figtree", sans-serif;
+  font-size: 16pt;
+  line-height: 1.25;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: clamp(200px, 100%, 800px);
+  height: 100%;
+  margin-block: 1rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  color: #333;
+
+}
 
 h1,
 h2,
@@ -6,5 +35,44 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+main {
+}
+
+.reviews > article + article {
+  margin-block-start: 2rem;
+}
+
+.name {
+  line-height: 1.25rem;
+}
+
+.name__source {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: var(--space-m);
+  column-gap: var(--space-s);
+
+  margin-top: var(--space-s);
+}
+
+.details__comments > p {
+  font-size: 0.8rem;
+}
+
+.details__comments > p + p {
+  margin-top: var(--space-m);
 }
