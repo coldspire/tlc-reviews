@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Karla";
+  src:
+    local("Karla"),
+    url("/assets/fonts/Karla-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Figtree";
+  src:
+    local("Figtree"),
+    url("/assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}

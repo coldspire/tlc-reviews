@@ -28,6 +28,9 @@ export default async function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("styles")
+
   return {
     dir: {
       data: "../_data",
