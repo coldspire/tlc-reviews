@@ -21,6 +21,13 @@ export default async function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.addFilter('dateAdded', (reviewDateAdded) => {
+    const date = new Date(reviewDateAdded);
+    return date.toLocaleDateString(undefined, {
+      dateStyle: 'long'
+    });
+  });
+
   return {
     dir: {
       data: "../_data",
