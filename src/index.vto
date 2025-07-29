@@ -3,5 +3,5 @@ const title = "Nanoreviews";
 const layout = "layouts/base.vto";
 ---
 {{ for review of reviews }}
-    {{ review.name }}, {{ Date(review.dataAdded) |> dateAdded }}, {{ review.rating }}
+    <p>{{ review.name }}, {{ review.dateExperienced |> dateFriendly }}, {{ review.rating }}</p>
 {{ /for }}

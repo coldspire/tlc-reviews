@@ -21,10 +21,10 @@ export default async function (eleventyConfig) {
     },
   });
 
-  eleventyConfig.addFilter('dateAdded', (reviewDateAdded) => {
-    const date = new Date(reviewDateAdded);
-    return date.toLocaleDateString(undefined, {
-      dateStyle: 'long'
+  eleventyConfig.addFilter("dateFriendly", (dateOriginal) => {
+    const date = new Date(dateOriginal);
+    return date.toLocaleDateString("en-US", {
+      dateStyle: "long",
     });
   });
 
